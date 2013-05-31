@@ -10,51 +10,57 @@
 .inc '/w/design/puneet/projects/liangzhen/hspice/models/ibm/models/design.inc.local'
 .unprot
 
-.PARAM sigma=0.0
+.param SIGMA=0.0 $ for IBM models
 
 
-******** PARAMETERS
-.PARAM vdd=1.0
-.PARAM vss=0
-.PARAM w_nmos=180n
-.PARAM w_access=120n
-.PARAM w_pmos=120n
-.PARAM l_nmos=45n
-.PARAM l_access=45n
-.PARAM l_pmos=45n
+******** paramETERS
+.param VDD_VAL=1.0
+.param VSS_VAL=0.0
+.param W_NMOS=180n
+.param W_ACCESS=120n
+.param W_PMOS=120n
+.param L_NMOS=45n
+.param L_ACCESS=45n
+.param L_PMOS=45n
 
 
 ****** VOLTAGE SOURCES
-.GLOBAL vdd vss
-
-vdd vdd 0 vdd
-vss vss 0 0
-V_Q Q vss dc=0
+v_vdd	vdd	vss	VDD_VAL 
+v_vss	vss	0	VSS_VAL
+v_in	Q	vss	VSS_VAL 
+v_WL	WL	vss	VSS_VAL 
+v_BL	BL	vss	VDD_VAL	
+v_BL_b	BL_b	vss	VDD_VAL
 
 ****** 6T SRAM subcircuit
-*.subckt sram6t	BL	BL_bar	WL
+*.subckt sram6t	BL	BL_b	WL
 
-x_n1	Q	Q_bar	vss	vss	d_nfet	w=w_nmos	l=l_nmos	as=0	ad=0	ps=w_nmos	pd=w_nmos
-x_p1	Q	Q_bar	vdd	vdd	d_pfet	w=w_pmos	l=l_pmos	as=0	ad=0	ps=w_pmos	pd=w_pmos
-x_a1	Q	WL	BL	vss	d_nfet	w=w_access	l=l_access	as=0	ad=0	ps=w_access	pd=w_access
+x_n1	Q	Q_b	vss	vss	d_nfet	w=W_NMOS	l=L_NMOS	as=0	ad=0	ps=W_NMOS	pd=W_NMOS
+x_p1	Q	Q_b	vdd	vdd	d_pfet	w=W_PMOS	l=L_PMOS	as=0	ad=0	ps=W_PMOS	pd=W_PMOS
+x_a1	Q	WL	BL	vss	d_nfet	w=W_ACCESS	l=L_ACCESS	as=0	ad=0	ps=w_access	pd=W_ACCESS
 
-x_n2	Q_bar	Q	vss	vss	d_nfet	w=w_nmos	l=l_nmos	as=0	ad=0	ps=w_nmos	pd=w_nmos
-x_p2	Q_bar	Q	vdd	vdd	d_pfet	w=w_pmos	l=l_pmos	as=0	ad=0	ps=w_pmos	pd=w_pmos
-x_a2	Q_bar	WL	BL_bar	vss	d_nfet	w=w_access	l=l_access	as=0	ad=0	ps=w_access	pd=w_access
+x_n2	Q_b	Q	vss	vss	d_nfet	w=W_NMOS	l=L_NMOS	as=0	ad=0	ps=W_NMOS	pd=W_NMOS
+x_p2	Q_b	Q	vdd	vdd	d_pfet	w=W_PMOS	l=L_PMOS	as=0	ad=0	ps=W_PMOS	pd=W_PMOS
+x_a2	Q_b	WL	BL_b	vss	d_nfet	w=W_ACCESS	l=L_ACCESS	as=0	ad=0	ps=W_ACCESS	pd=W_ACCESS
+
 
 *.ends
 
 ****** MAIN CIRCUIT
-*sram_cell	bitline	bitline_bar	wordline	sram6t
+*sram_cell	bitline	bitline_b	wordline	sram6t
 
 ****** ANALYSIS
-.DC	V_Q	vss	vdd	0.01
-.PRINT	V(Q_bar)
-.PLOT V(Q_bar)
+*.options accurate
+*.options nomod
+.option probe
+.option post=CSDF
 
-.op
-.options accurate
-.options nomod post
+* Sweep Q and read Q_b
+.dc	v_in	VSS_VAL	VDD_VAL	0.01 SWEEP MONTE=10
+.probe DC V(Q_b)
 
+*.alter
+* Sweep Q_b and read Q
+*v_in	Q_b	vss	VSS_VAL
 
 .end
