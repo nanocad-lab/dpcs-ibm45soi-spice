@@ -13,7 +13,7 @@
 .param SIGMA=0.0 $ for IBM models
 
 
-******** paramETERS
+******** param
 .param VDD_VAL=1.0
 .param VSS_VAL=0.0
 .param W_NMOS=180n
