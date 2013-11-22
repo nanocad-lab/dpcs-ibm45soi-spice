@@ -16,32 +16,20 @@
 
 ******** param
 .param VDD_VAL=1.0
-*.param VSS_VAL=0.0
 .param W=67.5n
 .param L=45n
-*.param W_nmos=93.6n
-*.param L_nmos=45n
-*.param W_pmos=55.35
-*.param L_pmos=45n
-*.param W_access=58.95n
-*.param L_access=45n
-*
 
 ****** VOLTAGE SOURCES
 v_vdd	vdd	0	VDD_VAL 
-*v_vss	vss	0	VSS_VAL
 
-r1		vdd inter 0.00000001
+r1		vdd inter 0.00001
 x_n1	inter	vdd 0	0 d_hvtnfet	w=W	l=L as=0 ad=0 ps=W pd=W
 
 ****** ANALYSIS
 .options accurate
-*.options nomod
-*.option probe
-*.option post=CSDF
 
 * Sweep vdd and read current 
-.dc	v_vdd	START=0	STOP=VDD_VAL	STEP=0.001
+.dc	v_vdd	START=0	STOP=VDD_VAL	STEP=0.01
 .probe DC I(r1)
 .print I(r1)
 .plot I(r1)

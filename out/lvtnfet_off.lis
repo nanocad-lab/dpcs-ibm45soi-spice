@@ -1,0 +1,722 @@
+ ****** HSPICE -- E-2010.12-SP2 64-BIT (May 23 2011) linux ******               
+  Copyright (C) 2010 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: lvtnfet_off.sp                                                    
+  Command line options: lvtnfet_off.sp -o out/lvtnfet_off
+ lic: No 'setenv LM_LICENSE_FILE' in current environment' 
+ lic:  
+ lic: FLEXlm: v10.8 
+ lic: USER:   mgottscho            HOSTNAME: mfd.ee.ucla.edu 
+ lic: HOSTID: 002219a484e9         PID:      15248 
+ lic: Using FLEXlm license file: 
+ lic: 1784@lmserv2.seas.ucla.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 25-jun-2014/2013.03 
+ lic: 1(in_use)/50(total) FLOATING license(s) on SERVER lmserv2.seas.ucla.edu 
+ lic:   
+ Init: read install configuration file: /usr/apps/synopsys/HSPICE/vE-2010.12.SP2/hspice/meta.cfg
+ **warning** *pvaW* Ignored the duplicated module 'diova' (/w/library/puneet/IBM/IBM_CMOS/12S0_45_nm_SOI_CMOS/IBM_PDK/soi12s0/V1.5.0.0IBM/HSPICE/models/./erie/diodeva.va:13)
+
+ **info** *pvaI* Module (It2_monitor): 2 unexpanded port, 0 init, 4 behav, 1 contrib, 22/0 expr(s)
+
+ **info** *pvaI*              0 afCount, 0 fixDIS
+
+ **info** *pvaI* Module (It2_monitor): generated 1 flow node(s) during compilation.
+
+ **info** *pvaI* Module (It2_monitor_scr): 2 unexpanded port, 0 init, 4 behav, 1 contrib, 22/0 expr(s)
+
+ **info** *pvaI*              0 afCount, 0 fixDIS
+
+ **info** *pvaI* Module (It2_monitor_scr): generated 1 flow node(s) during compilation.
+
+ **info** *pvaI* Module (diova): 2 unexpanded port, 0 init, 31 behav, 2 contrib, 24/28 expr(s)
+
+ **info** *pvaI*              0 afCount, 0 fixDIS
+
+ **info** *pvaI* Module (diova): generated 0 flow node(s) during compilation.
+
+ **info** *pvaI* Module (esdnsh_bc_base_va): 4 unexpanded port, 0 init, 99 behav, 7 contrib, 50/85 expr(s)
+
+ **info** *pvaI*              0 afCount, 0 fixDIS
+
+ **info** *pvaI* Module (esdnsh_bc_base_va): generated 1 flow node(s) during compilation.
+
+ **info** *pvaI* Module (esdpsh_bc_base_va): 4 unexpanded port, 0 init, 59 behav, 7 contrib, 50/45 expr(s)
+
+ **info** *pvaI*              0 afCount, 0 fixDIS
+
+ **info** *pvaI* Module (esdpsh_bc_base_va): generated 1 flow node(s) during compilation.
+
+ **info** *pvaI* Module (esdnsh_base_va): 3 unexpanded port, 0 init, 93 behav, 3 contrib, 34/84 expr(s)
+
+ **info** *pvaI*              0 afCount, 0 fixDIS
+
+ **info** *pvaI* Module (esdnsh_base_va): generated 1 flow node(s) during compilation.
+
+ **info** *pvaI* Module (esdpsh_base_va): 3 unexpanded port, 0 init, 53 behav, 3 contrib, 40/44 expr(s)
+
+ **info** *pvaI*              0 afCount, 0 fixDIS
+
+ **info** *pvaI* Module (esdpsh_base_va): generated 1 flow node(s) during compilation.
+
+ **info** *pvaI* Module (dgdcap): 3 unexpanded port, 0 init, 100 behav, 5 contrib, 53/91 expr(s)
+
+ **info** *pvaI*              0 afCount, 0 fixDIS
+
+ **info** *pvaI* Module (dgdcap): generated 3 flow node(s) during compilation.
+
+ **info** *pvaI* Module (trenchcap): 2 unexpanded port, 0 init, 88 behav, 4 contrib, 53/108 expr(s)
+
+ **info** *pvaI*              0 afCount, 0 fixDIS
+
+ **info** *pvaI* Module (trenchcap): generated 3 flow node(s) during compilation.
+
+ **info** *pvaI* Module (nbsxdio): 2 unexpanded port, 0 init, 30 behav, 2 contrib, 26/108 expr(s)
+
+ **info** *pvaI*              0 afCount, 0 fixDIS
+
+ **info** *pvaI* Module (nbsxdio): generated 0 flow node(s) during compilation.
+
+ **info** *pvaI* Module (ig_elements_n): 3 unexpanded port, 0 init, 16 behav, 2 contrib, 69/14 expr(s)
+
+ **info** *pvaI*              0 afCount, 0 fixDIS
+
+ **info** *pvaI* Module (ig_elements_n): generated 0 flow node(s) during compilation.
+
+ **info** *pvaI* Module (ig_elements_p): 3 unexpanded port, 0 init, 16 behav, 2 contrib, 74/14 expr(s)
+
+ **info** *pvaI*              0 afCount, 0 fixDIS
+
+ **info** *pvaI* Module (ig_elements_p): generated 0 flow node(s) during compilation.
+
+ **info** *pvaI* Module (single_rcline): 3 unexpanded port, 0 init, 254 behav, 15 contrib, 47/239 expr(s)
+
+ **info** *pvaI*              3 afCount, 0 fixDIS
+
+ **info** *pvaI* Module (single_rcline): generated 2 flow node(s) during compilation.
+
+ **info** *pvaI* Module (coupled_rcline): 5 unexpanded port, 0 init, 402 behav, 13 contrib, 65/389 expr(s)
+
+ **info** *pvaI*        0ff DIS, 5 afCount
+
+ **info** *pvaI* Module (coupled_rcline): generated 0 flow node(s) during compilation.
+
+ **info** *pvaI* #### Total 4522 line-size(s), 629 expr(s), 67 contr(s), 0 init(s), 1249 behav(s), 41 port(s)
+
+  **warning** (/w/library/puneet/IBM/IBM_CMOS/12S0_45_nm_SOI_CMOS/IBM_PDK/soi12s0/V1.5.0.0IBM/HSPICE/models/./process.lib:92) Parameter name is not defined in .param. Please enter parameter variable with their respective value/expression.
+  **warning** (/w/library/puneet/IBM/IBM_CMOS/12S0_45_nm_SOI_CMOS/IBM_PDK/soi12s0/V1.5.0.0IBM/HSPICE/models/./symindp.inc:75) Global net name, "gnd", in subckt pin list. The pin will be connected to the local net. Recommend to not use global net names in subckt pin lists.
+ Loading pVA library out/lvtnfet_off.pvadir/pvaRTL_linux.so...
+
+ **warning**  runlvl smaller than 5, reset to 5  when accurate turned on
+1****** HSPICE -- E-2010.12-SP2 64-BIT (May 23 2011) linux ******               
+ ******  
+ ******* nmos in ibm 45nm soi for on-current measurement
+
+  ******  circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x_n1.                           d_lvtnfet          1.00 
+1****** HSPICE -- E-2010.12-SP2 64-BIT (May 23 2011) linux ******               
+ ******  
+ ******* nmos in ibm 45nm soi for on-current measurement
+
+  ******  mos   model parameters tnom=  25.000 temp=  25.000 *****
+ 
+Model Name: lvtnch  
+
+ BSIMSOI4 PD (Level 70)
+
+    wmax =      1 m
+    wmin =      0 m
+    lmax =      1 m
+    lmin =      0 m
+    xw =      0 m
+    xwref =      0 m
+    xl =      0 m
+    xlref =      0 m
+    capmod = 3
+    mobmod = 1
+    paramchk = 0
+    binunit = 1
+    version =      4 
+    tox = 1.892e-09 m
+    toxm = 1.87e-09 m
+    dtoxcv = 1.18e-10 m
+    cdsc =  0.039 F/M^2
+    cdscb =  0.012 F/M^2
+    cdscd =  0.024 F/M^2
+    cit =      0 F/M^2
+    nfactor = 0.07481 
+    vsat = 1.946e+05 m/sec
+    at = 1.318e+04 m/sec
+    a0 =  2.447 
+    ags =      0 1/V
+    a1 = -0.0004149 1/V
+    a2 =  1.008 
+    keta = -0.1627 1/V
+    nsub =  6e+16 1/cm3
+    nch = 3.953e+19 1/cm3
+    ngate =      0 1/cm3
+    gamma1 =      0 V^1/2
+    gamma2 =      0 V^1/2
+    vbx =      0 V
+    vbm =     -3 V
+    xt = 1.55e-07 m
+    k1 = 0.4706 V^1/2
+    kt1 = -0.1179 V
+    kt1l = 4.681e-09 V*m
+    kt2 = 0.02654 
+    k2 = -0.03094 
+    k3 = -17.05 
+    k3b =      0 1/V
+    w0 = 5.099e-07 m
+    lpe0 = 3.098e-08 m
+    lpeb =      0 m
+    dvt0 =     21 
+    dvt1 =   0.63 
+    dvt2 = -0.004983 1/V
+    dvt0w = 0.06871 
+    dvt1w =      0 
+    dvt2w =      0 1/V
+    drout =   0.01 
+    dsub =   0.58 
+    vth0 = 0.1838 V
+    ua =  1e-11 m/V
+    ua1 = 1.483e-09 m/V
+    ub = 2.758e-19 (m/V)^2
+    ub1 = -6.064e-19 (m/V)^2
+    uc = 5.623e-11 1/V
+    uc1 =      0 1/V
+    u0 = 0.03469 m^2/(V-sec)
+    ute =   -0.2 
+    voff =  -0.18 V
+    tnom =  298.1 K
+    cgso = 2.38e-10 F/m
+    cgdo = 2.38e-10 F/m
+    xpart =      0 
+    delta = 0.01593 
+    rsh =     21 ohm/square
+    rdsw =  60.24 ohm-um^WR
+    rsw =     50 ohm-um^WR
+    rdw =     50 ohm-um^WR
+    rswmin =      0 ohm-um^WR
+    rdwmin =      0 ohm-um^WR
+    prwg = -0.07902 1/V^1/2
+    prwb = 0.1548 1/V
+    prt =  29.94 ohm-um
+    eta0 = 0.4863 
+    etab = -0.03351 1/V
+    pclm =   0.67 
+    pdiblc1 =  0.027 
+    pdiblc2 = 0.03322 
+    pdiblcb = -0.8654 
+    pvag =    0.1 
+    shmod = 1
+    tbox = 3.9e-07 m
+    tsi = 7.8e-08 m
+    xj = 4.388e-08 m
+    rth0 =   0.08 m*C/W
+    cth0 = 2.86e-05 W*sec/(m*C)
+    egidl =      0 V
+    agidl =      0 1/ohm
+    bgidl = 2.3e+09 V/m
+    cgidl =      0 V^3
+    ndiode =  1.622 
+    ndioded =  1.622 
+    xbjt =  1.057 
+    xdif =   1.03 
+    xrec = 0.3622 
+    xtun =     10 
+    xdifd =   1.03 
+    xrecd = 0.3622 
+    xtund =     10 
+    pbswg =    2.8 V
+    pbswgd =    2.8 V
+    mjswg =    2.5 V
+    mjswgd =    2.5 V
+    cjswg = 2.426e-10 F/m^2
+    cjswgd = 2.426e-10 F/m^2
+    lint = -5e-10 m
+    ll =  1e-09 m^LLN
+    llc =      0 m^LLN
+    lln =      0 
+    lw =      0 m^LWN
+    lwc =      0 m^LWN
+    lwn =      1 
+    lwl =      0 m^(LWN+LLN)
+    lwlc =      0 m^(LWN+LLN)
+    wr =      1 
+    wint =  2e-09 m
+    dwg =      0 m/V
+    dwb =      0 m/V^1/2
+    wl =      0 m^WLN
+    wlc =      0 m^WLN
+    wln =      1 
+    ww =      0 m^WWN
+    wwc =      0 m^WWN
+    wwn =      1 
+    wwl =      0 m^(WWN+WLN)
+    wwlc =      0 m^(WWN+WLN)
+    b0 = 2.5e-08 m
+    b1 =      0 m
+    cgsl = 4.5e-11 F/m
+    cgdl = 4.5e-11 F/m
+    ckappa =  0.001 F/m
+    cf =      0 F/m
+    clc =      0 m
+    cle =      1 
+    dwc = -1.85e-08 m
+    dlc = 9.1e-09 m
+    alpha0 = 1.117e-14 m/V
+    noia = 6.25e+41 
+    noib = 3.125e+26 
+    noic = 8.75e+09 
+    fnoimod = 0
+    tnoimod = 0
+    tnoia =      0 
+    tnoib =      0 
+    rnoia =      0 
+    rnoib =      0 
+    ntnoi =      1 
+    saref =  1e-06 m
+    sbref =  1e-06 m
+    wlod =      0 m
+    ku0 =      0 m
+    kvsat =      0 m
+    kvth0 =      0 Vm
+    tku0 =      0 
+    llodku0 =      0 
+    wlodku0 =      0 
+    llodvth =      0 
+    wlodvth =      0 
+    stk2 =      0 m
+    lodk2 =      1 
+    steta0 =      0 m
+    lodeta0 =      1 
+    gbmin =  1e-12 mho
+    rbdb =     50 ohm
+    rbsb =     50 ohm
+    bf =      2 
+    w0flk =  0.001 
+    frbody =      1 
+    dvtp0 =      0 m
+    dvtp1 =      0 1/V
+    minv =      0 
+    pdits =  1e-20 1/V
+    pditsl =      0 m
+    pditsd =      0 1/V
+    fprout =      0 (V/m)^0.5
+    em =      0 
+    ef =      1 
+    af =      2 
+    kf =  3e-27 
+    noif =    0.3 
+    k1w1 =      0 m
+    k1w2 =      0 m
+    ketas = 0.1164 V
+    dwbc =      0 m
+    beta0 = 0.03125 1/V
+    beta1 = 0.009483 
+    beta2 = 0.05657 V
+    vdsatii0 = 0.7494 V
+    tii =   -0.3 
+    lii = 1.485e-09 
+    sii0 =    0.1 1/V
+    sii1 =     20 1/V
+    sii2 =      0 
+    siid =      4 1/V
+    fbjtii =      0 
+    esatii = 5.892e+06 V/m
+    ntun =  1.354 
+    ntund =  1.354 
+    nrecf0 =    2.3 
+    nrecf0d =    2.3 
+    nrecr0 =  3.274 
+    nrecr0d =  3.274 
+    isbjt = 0.004705 A/m^2
+    idbjt = 0.004705 A/m^2
+    isdif =   0.01 A/m^2
+    iddif =   0.01 A/m^2
+    isrec = 0.3165 A/m^2
+    idrec = 0.3165 A/m^2
+    istun = 0.01104 A/m^2
+    idtun = 0.01104 A/m^2
+    ln = 1.418e-07 m
+    vrec0 =  1.458 V
+    vrec0d =  1.458 V
+    vtun0 = 0.4215 V
+    vtun0d = 0.4215 V
+    nbjt =      1 
+    lbjt0 =  5e-07 m
+    ldif0 =     12 
+    vabjt =     20 V
+    aely =  1e+08 V/m
+    ahli =  1e-11 
+    ahlid =  1e-11 
+    rbody = 1.73e+04 ohm/m^2
+    rbsh =      0 ohm/m^2
+    cgeo =      0 F/m
+    tt =  8e-13 second
+    ndif =     -1 
+    vsdfb =      0 V
+    vsdth =      0 V
+    csdmin =      0 V
+    asd =    0.3 
+    csdesw = 1.563e-10 F/m
+    ntrecf = 0.5282 
+    ntrecr = 0.6193 
+    dlcb = -1.3e-08 m
+    fbody =    0.9 
+    tcjswg = 0.00095 1/K
+    tcjswgd = 0.00095 1/K
+    tpbswg = 0.0008 V/K
+    tpbswgd = 0.0008 V/K
+    acde =      1 m/V
+    moin =      7 V^1/2
+    noff =      1 
+    delvt =  -0.04 V
+    kb1 =      1 
+    dlbg =      0 m
+    igbmod = 1
+    igcmod = 1
+    toxqm = 1.16e-09 m
+    wth0 =      0 m
+    rhalo = 1.266e+12 ohm/m
+    ntox =      0 
+    toxref = 1.16e-09 m
+    ebg =  1.263 V
+    vevb = 0.05968 
+    alphagb1 = 0.6452 1/V
+    betagb1 = 0.1378 1/V^2
+    vgb1 =  345.7 V
+    vecb = 0.1266 
+    alphagb2 =  0.516 1/V
+    betagb2 =    0.1 1/V^2
+    vgb2 =      8 V
+    voxh =      2 
+    deltavox =  0.002 
+    aigc = 0.02041 
+    bigc = 0.002195 
+    cigc =   -0.1 
+    aigsd = 0.01443 
+    bigsd = 0.002018 
+    cigsd = 0.0825 
+    nigc = 0.2879 
+    pigcd =      1 
+    poxedge =      1 
+    dlcig = 1.471e-09 m
+    soimod = 0
+    vbs0pd =      0 V
+    vbs0fd =      0 V
+    vbsa =      0 V
+    nofffd =      1 
+    vofffd =      0 V
+    k1b =      1 
+    k2b =      0 
+    dk2b =      0 
+    dvbd0 =      0 
+    dvbd1 =      0 
+    moinfd =   1000 
+    rgatemod = 1
+    xrcrg1 =      0 
+    xrcrg2 =      0 
+    rshg =     14 ohm/square
+    ngcon =      1 
+    xgw =      0 m
+    xgl = -1e-09 m
+    rbodymod = 0
+    rdsmod = 0
+    bsoiupdate = 0
+ 
+
+  
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 5         bypass  = 2         
+ ******  
+ ******* nmos in ibm 45nm soi for on-current measurement
+
+  ******  dc transfer curves tnom=  25.000 temp=  25.000 *****
+x
+
+        volt    current    
+                    r1     
+    0.            0.       
+   10.00000m      8.6146n  
+   20.00000m     15.0217n  
+   30.00000m     19.6704n  
+   40.00000m     23.0448n  
+   50.00000m     25.5677n  
+   60.00000m     27.5502n  
+   70.00000m     29.1989n  
+   80.00000m     30.6422n  
+   90.00000m     31.9647n  
+  100.00000m     33.2068n  
+  110.00000m     34.4044n  
+  120.00000m     35.5771n  
+  130.00000m     36.7373n  
+  140.00000m     37.8947n  
+  150.00000m     39.0549n  
+  160.00000m     40.2262n  
+  170.00000m     41.4058n  
+  180.00000m     42.6020n  
+  190.00000m     43.8122n  
+  200.00000m     45.0362n  
+  210.00000m     46.2935n  
+  220.00000m     47.5675n  
+  230.00000m     48.8581n  
+  240.00000m     50.1738n  
+  250.00000m     51.5088n  
+  260.00000m     52.8744n  
+  270.00000m     54.2622n  
+  280.00000m     55.6721n  
+  290.00000m     57.1154n  
+  300.00000m     58.5754n  
+  310.00000m     60.0575n  
+  320.00000m     61.5785n  
+  330.00000m     63.1217n  
+  340.00000m     64.6871n  
+  350.00000m     66.2914n  
+  360.00000m     67.9068n  
+  370.00000m     69.5610n  
+  380.00000m     71.2375n  
+  390.00000m     72.9639n  
+  400.00000m     74.6847n  
+  410.00000m     76.4555n  
+  420.00000m     78.2541n  
+  430.00000m     80.0748n  
+  440.00000m     81.9345n  
+  450.00000m     83.8218n  
+  460.00000m     85.7203n  
+  470.00000m     87.6632n  
+  480.00000m     89.6505n  
+  490.00000m     91.6378n  
+  500.00000m     93.6862n  
+  510.00000m     95.7456n  
+  520.00000m     97.8551n  
+  530.00000m     99.9756n  
+  540.00000m    102.1405n  
+  550.00000m    104.3166n  
+  560.00000m    106.5592n  
+  570.00000m    108.8130n  
+  580.00000m    111.1111n  
+  590.00000m    113.4315n  
+  600.00000m    115.7741n  
+  610.00000m    118.1610n  
+  620.00000m    120.5702n  
+  630.00000m    123.0349n  
+  640.00000m    125.5440n  
+  650.00000m    128.0531n  
+  660.00000m    130.6066n  
+  670.00000m    133.2157n  
+  680.00000m    135.8358n  
+  690.00000m    138.5003n  
+  700.00000m    141.2093n  
+  710.00000m    143.9737n  
+  720.00000m    146.7604n  
+  730.00000m    149.5803n  
+  740.00000m    152.4669n  
+  750.00000m    155.3646n  
+  760.00000m    158.3067n  
+  770.00000m    161.2821n  
+  780.00000m    164.3574n  
+  790.00000m    167.4216n  
+  800.00000m    170.5414n  
+  810.00000m    173.7388n  
+  820.00000m    176.9807n  
+  830.00000m    180.2780n  
+  840.00000m    183.6420n  
+  850.00000m    187.0393n  
+  860.00000m    190.5476n  
+  870.00000m    194.1003n  
+  880.00000m    197.7196n  
+  890.00000m    201.4389n  
+  900.00000m    205.2358n  
+  910.00000m    209.1327n  
+  920.00000m    213.1073n  
+  930.00000m    217.1929n  
+  940.00000m    221.4007n  
+  950.00000m    225.7305n  
+  960.00000m    230.1825n  
+  970.00000m    234.7678n  
+  980.00000m    239.5084n  
+  990.00000m    244.4156n  
+    1.00000     249.4449n  
+y
+
+a
+
+
+      volt       i(r1)
+ (a       )       0.          100.0000n     200.0000n     300.0000n    400.0000n
+                      +             +             +             +             + 
+    0.         0.    -a------+------+------+------+------+------+------+------+-
+   10.0000m    8.615n +a     +      +      +      +      +      +      +      + 
+   20.0000m   15.022n + a    +      +      +      +      +      +      +      + 
+   30.0000m   19.670n +  a   +      +      +      +      +      +      +      + 
+   40.0000m   23.045n +  a   +      +      +      +      +      +      +      + 
+   50.0000m   25.568n +   a  +      +      +      +      +      +      +      + 
+   60.0000m   27.550n +   a  +      +      +      +      +      +      +      + 
+   70.0000m   29.199n +   a  +      +      +      +      +      +      +      + 
+   80.0000m   30.642n +   a  +      +      +      +      +      +      +      + 
+   90.0000m   31.965n +   a  +      +      +      +      +      +      +      + 
+  100.0000m   33.207n-+----a-+------+------+------+------+------+------+------+-
+  110.0000m   34.404n +    a +      +      +      +      +      +      +      + 
+  120.0000m   35.577n +    a +      +      +      +      +      +      +      + 
+  130.0000m   36.737n +    a +      +      +      +      +      +      +      + 
+  140.0000m   37.895n +    a +      +      +      +      +      +      +      + 
+  150.0000m   39.055n +    a +      +      +      +      +      +      +      + 
+  160.0000m   40.226n +     a+      +      +      +      +      +      +      + 
+  170.0000m   41.406n +     a+      +      +      +      +      +      +      + 
+  180.0000m   42.602n +     a+      +      +      +      +      +      +      + 
+  190.0000m   43.812n +     a+      +      +      +      +      +      +      + 
+  200.0000m   45.036n-+-----a+------+------+------+------+------+------+------+-
+  210.0000m   46.294n +     a+      +      +      +      +      +      +      + 
+  220.0000m   47.568n +      a      +      +      +      +      +      +      + 
+  230.0000m   48.858n +      a      +      +      +      +      +      +      + 
+  240.0000m   50.174n +      a      +      +      +      +      +      +      + 
+  250.0000m   51.509n +      a      +      +      +      +      +      +      + 
+  260.0000m   52.874n +      a      +      +      +      +      +      +      + 
+  270.0000m   54.262n +      +a     +      +      +      +      +      +      + 
+  280.0000m   55.672n +      +a     +      +      +      +      +      +      + 
+  290.0000m   57.115n +      +a     +      +      +      +      +      +      + 
+  300.0000m   58.575n-+------+a-----+------+------+------+------+------+------+-
+  310.0000m   60.058n +      +a     +      +      +      +      +      +      + 
+  320.0000m   61.579n +      + a    +      +      +      +      +      +      + 
+  330.0000m   63.122n +      + a    +      +      +      +      +      +      + 
+  340.0000m   64.687n +      + a    +      +      +      +      +      +      + 
+  350.0000m   66.291n +      + a    +      +      +      +      +      +      + 
+  360.0000m   67.907n +      +  a   +      +      +      +      +      +      + 
+  370.0000m   69.561n +      +  a   +      +      +      +      +      +      + 
+  380.0000m   71.237n +      +  a   +      +      +      +      +      +      + 
+  390.0000m   72.964n +      +  a   +      +      +      +      +      +      + 
+  400.0000m   74.685n-+------+--a---+------+------+------+------+------+------+-
+  410.0000m   76.456n +      +   a  +      +      +      +      +      +      + 
+  420.0000m   78.254n +      +   a  +      +      +      +      +      +      + 
+  430.0000m   80.075n +      +   a  +      +      +      +      +      +      + 
+  440.0000m   81.934n +      +   a  +      +      +      +      +      +      + 
+  450.0000m   83.822n +      +    a +      +      +      +      +      +      + 
+  460.0000m   85.720n +      +    a +      +      +      +      +      +      + 
+  470.0000m   87.663n +      +    a +      +      +      +      +      +      + 
+  480.0000m   89.651n +      +     a+      +      +      +      +      +      + 
+  490.0000m   91.638n +      +     a+      +      +      +      +      +      + 
+  500.0000m   93.686n-+------+-----a+------+------+------+------+------+------+-
+  510.0000m   95.746n +      +     a+      +      +      +      +      +      + 
+  520.0000m   97.855n +      +      a      +      +      +      +      +      + 
+  530.0000m   99.976n +      +      a      +      +      +      +      +      + 
+  540.0000m  102.141n +      +      a      +      +      +      +      +      + 
+  550.0000m  104.317n +      +      +a     +      +      +      +      +      + 
+  560.0000m  106.559n +      +      +a     +      +      +      +      +      + 
+  570.0000m  108.813n +      +      +a     +      +      +      +      +      + 
+  580.0000m  111.111n +      +      + a    +      +      +      +      +      + 
+  590.0000m  113.431n +      +      + a    +      +      +      +      +      + 
+  600.0000m  115.774n-+------+------+-a----+------+------+------+------+------+-
+  610.0000m  118.161n +      +      +  a   +      +      +      +      +      + 
+  620.0000m  120.570n +      +      +  a   +      +      +      +      +      + 
+  630.0000m  123.035n +      +      +  a   +      +      +      +      +      + 
+  640.0000m  125.544n +      +      +   a  +      +      +      +      +      + 
+  650.0000m  128.053n +      +      +   a  +      +      +      +      +      + 
+  660.0000m  130.607n +      +      +   a  +      +      +      +      +      + 
+  670.0000m  133.216n +      +      +    a +      +      +      +      +      + 
+  680.0000m  135.836n +      +      +    a +      +      +      +      +      + 
+  690.0000m  138.500n +      +      +    a +      +      +      +      +      + 
+  700.0000m  141.209n-+------+------+-----a+------+------+------+------+------+-
+  710.0000m  143.974n +      +      +     a+      +      +      +      +      + 
+  720.0000m  146.760n +      +      +      a      +      +      +      +      + 
+  730.0000m  149.580n +      +      +      a      +      +      +      +      + 
+  740.0000m  152.467n +      +      +      a      +      +      +      +      + 
+  750.0000m  155.365n +      +      +      +a     +      +      +      +      + 
+  760.0000m  158.307n +      +      +      +a     +      +      +      +      + 
+  770.0000m  161.282n +      +      +      + a    +      +      +      +      + 
+  780.0000m  164.357n +      +      +      + a    +      +      +      +      + 
+  790.0000m  167.422n +      +      +      + a    +      +      +      +      + 
+  800.0000m  170.541n-+------+------+------+--a---+------+------+------+------+-
+  810.0000m  173.739n +      +      +      +  a   +      +      +      +      + 
+  820.0000m  176.981n +      +      +      +   a  +      +      +      +      + 
+  830.0000m  180.278n +      +      +      +   a  +      +      +      +      + 
+  840.0000m  183.642n +      +      +      +    a +      +      +      +      + 
+  850.0000m  187.039n +      +      +      +    a +      +      +      +      + 
+  860.0000m  190.548n +      +      +      +     a+      +      +      +      + 
+  870.0000m  194.100n +      +      +      +     a+      +      +      +      + 
+  880.0000m  197.720n +      +      +      +      a      +      +      +      + 
+  890.0000m  201.439n +      +      +      +      a      +      +      +      + 
+  900.0000m  205.236n-+------+------+------+------+a-----+------+------+------+-
+  910.0000m  209.133n +      +      +      +      +a     +      +      +      + 
+  920.0000m  213.107n +      +      +      +      + a    +      +      +      + 
+  930.0000m  217.193n +      +      +      +      + a    +      +      +      + 
+  940.0000m  221.401n +      +      +      +      +  a   +      +      +      + 
+  950.0000m  225.731n +      +      +      +      +   a  +      +      +      + 
+  960.0000m  230.183n +      +      +      +      +   a  +      +      +      + 
+  970.0000m  234.768n +      +      +      +      +    a +      +      +      + 
+  980.0000m  239.508n +      +      +      +      +     a+      +      +      + 
+  990.0000m  244.416n +      +      +      +      +     a+      +      +      + 
+    1.0000   249.445n-+------+------+------+------+------a------+------+------+-
+                      +             +             +             +             + 
+
+b
+
+
+          ***** job concluded
+1****** HSPICE -- E-2010.12-SP2 64-BIT (May 23 2011) linux ******               
+ ******  
+ ******* nmos in ibm 45nm soi for on-current measurement
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU           L5420  @ 2.50GHz
+ cpu MHz	: 2493.750
+  
+ OS:
+ Linux version 2.6.18-308.24.1.el5 (mockbuild@x86-022.build.eng.bos.redhat.com) 
+ (gcc version 4.1.2 20080704 (Red Hat 4.1.2-52)) #1 SMP Wed Nov 21 11:42:14 EST 
+ 2012
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       6 # elements   =       3
+  # resistors   =       1 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       1
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       1 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           0
+  dc sweep           0.00         101         205
+  readin             2.44
+  errchk             0.13
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        213.19 megabytes
+           total cpu time            2.57 seconds
+           total elapsed time        7.10 seconds
+           job started at     19:40:45 11/21/2013
+           job ended   at     19:40:53 11/21/2013
+
+
+ lic: Release hspice token(s) 
