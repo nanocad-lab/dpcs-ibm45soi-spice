@@ -22,8 +22,8 @@
 ****** VOLTAGE SOURCES
 v_vdd	vdd	0	VDD_VAL 
 
-r1		vdd inter 0.00001
-x_n1	inter	vdd 0	0 d_lvtnfet	w=W	l=L as=0 ad=0 ps=W pd=W
+r1		inter 0 0.00001
+x_p1	inter	0 vdd	0 d_lvtpfet	w=W	l=L as=0 ad=0 ps=W pd=W
 
 ****** ANALYSIS
 .options accurate

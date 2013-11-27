@@ -22,8 +22,8 @@
 ****** VOLTAGE SOURCES
 v_vdd	vdd	0	VDD_VAL 
 
-r1		vdd inter 0.00001
-x_n1	inter	vdd 0	0 d_hvtnfet	w=W	l=L as=0 ad=0 ps=W pd=W
+r1		inter 0 0.00001
+x_p1	inter	VDD VDD	0 d_pfet	w=W	l=L as=0 ad=0 ps=W pd=W
 
 ****** ANALYSIS
 .options accurate
@@ -33,5 +33,6 @@ x_n1	inter	vdd 0	0 d_hvtnfet	w=W	l=L as=0 ad=0 ps=W pd=W
 .probe DC I(r1)
 .print I(r1)
 .plot I(r1)
+.option ingold=2
 
 .end

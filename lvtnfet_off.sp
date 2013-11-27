@@ -33,5 +33,6 @@ x_n1	inter	0	0	0 d_lvtnfet	w=W	l=L as=0 ad=0 ps=W pd=W
 .probe DC I(r1)
 .print I(r1)
 .plot I(r1)
+.option ingold=2
 
 .end
