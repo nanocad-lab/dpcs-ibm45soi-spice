@@ -13,10 +13,10 @@ echo "Post-processing..."
 perl pp.perl out/rvtnfet_on.lis 101 > out/rvtnfet_on.csv 
 perl pp.perl out/rvtnfet_off.lis 101 > out/rvtnfet_off.csv 
 perl pp.perl out/lvtnfet_on.lis 101 > out/lvtnfet_on.csv 
-perl pp.perl out/lvtnfet_on.lis 101 > out/lvtnfet_off.csv 
+perl pp.perl out/lvtnfet_off.lis 101 > out/lvtnfet_off.csv 
 perl pp.perl out/rvtpfet_on.lis 101 > out/rvtpfet_on.csv 
 perl pp.perl out/rvtpfet_off.lis 101 > out/rvtpfet_off.csv 
 perl pp.perl out/lvtpfet_on.lis 101 > out/lvtpfet_on.csv 
-perl pp.perl out/lvtpfet_on.lis 101 > out/lvtpfet_off.csv 
+perl pp.perl out/lvtpfet_off.lis 101 > out/lvtpfet_off.csv 
 
 echo "Done!"

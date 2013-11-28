@@ -9,7 +9,7 @@ $steps = $points * 2;
 @id = ( 1 .. $steps );
 
 @id = parsefile ( $input_file_name );
-print "voltage(mV),current(nA)\n";
+print "voltage(V),current(A)\n";
 for ($i=$steps-1;$i>0;$i-=2)
 {
   print "$id[$i-1],$id[$i]\n";
