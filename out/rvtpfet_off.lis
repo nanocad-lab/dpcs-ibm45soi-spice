@@ -11,7 +11,7 @@
  lic:  
  lic: FLEXlm: v10.8 
  lic: USER:   mgottscho            HOSTNAME: mfd.ee.ucla.edu 
- lic: HOSTID: 002219a484e9         PID:      14068 
+ lic: HOSTID: 002219a484e9         PID:      20560 
  lic: Using FLEXlm license file: 
  lic: 1784@lmserv2.seas.ucla.edu 
  lic: Checkout 1 hspice 
@@ -706,17 +706,17 @@ b
   analysis           time    # points   tot. iter  conv.iter
   op point           0.00           1           0
   dc sweep           0.01         101         209
-  readin             2.47
+  readin             2.43
   errchk             0.13
   setup              0.00
   output             0.00
 
 
            peak memory used        213.20 megabytes
-           total cpu time            2.61 seconds
-           total elapsed time        7.13 seconds
-           job started at     20:47:17 11/27/2013
-           job ended   at     20:47:24 11/27/2013
+           total cpu time            2.57 seconds
+           total elapsed time        7.06 seconds
+           job started at     17:47:45 11/28/2013
+           job ended   at     17:47:52 11/28/2013
 
 
  lic: Release hspice token(s) 
