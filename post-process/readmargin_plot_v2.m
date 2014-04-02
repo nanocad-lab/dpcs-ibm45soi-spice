@@ -1,5 +1,23 @@
 function [noiseMarginMatrix] = readmargin_plot_v2(data1, data2, curveSets)
 
+% readmargin_plot_v2
+% Author: Mark Gottscho
+% UCLA NanoCAD Lab
+%
+%
+%
+% data1: Qbar vs Q
+% data2: Q vs Qbar
+% curveSets: Number of matched curves for each data set.
+%
+% Returns noiseMarginMatrix, is an array of calculated noise margins for
+% each data set.
+%
+%
+% I suggest loading data1 and data2 as follows:
+% data1 = csvread('FILENAME_QBAR.csv',1,0);
+% data2 = csvread('FILENAME_Q.csv',1,0);
+
 noiseMarginMatrix = NaN(curveSets,1);
 
 identityLine = [0:0.01:0.99];
