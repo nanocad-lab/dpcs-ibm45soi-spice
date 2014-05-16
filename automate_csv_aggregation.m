@@ -21,4 +21,5 @@ clear string_cell_array;
 clear ls_remainder;
 clear single_filename;
 
+mkdir final-out
 fet_iv = aggregate_csv_results('processed-out', input_csv_filenames, 'final-out', 'aggregated_results.csv', 101);
