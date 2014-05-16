@@ -16,6 +16,8 @@ for i = 1:size(string_cell_array,2)-1
    input_csv_filenames{i} = string_cell_array{1,i};  
 end
 
+input_csv_filenames = sort(input_csv_filenames);
+
 clear i;
 clear string_cell_array;
 clear ls_remainder;
