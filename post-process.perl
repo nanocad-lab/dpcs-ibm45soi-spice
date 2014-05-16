@@ -1,6 +1,9 @@
 #!/usr/bin/perl
-
-# Mark Gottscho: This is based on Shaodi Wang's post-processing script for HSPICE data
+#
+# Authors: Shaodi Wang and Mark Gottscho
+# mgottscho@ucla.edu
+#
+# This is based on Shaodi Wang's post-processing script for HSPICE data
 
 $input_file_name = $ARGV[0];
 $points = $ARGV[1];
@@ -49,4 +52,3 @@ sub parsefile
   }
   return @id;
 }
-
