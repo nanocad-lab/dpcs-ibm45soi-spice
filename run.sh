@@ -1,3 +1,12 @@
+#!/bin/bash
+# 
+# Author: Mark Gottscho
+# mgottscho@ucla.edu
+#
+# Automate HSPICE runs to get basic I-V characteristics
+# for various HVT, RVT, LVT MOSFET models in both
+# on and off conditions as voltage is scaled.
+
 echo "Running HSPICE..."
 
 hspice hvtnfet_on.sp -o out/hvtnfet_on
