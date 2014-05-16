@@ -1,4 +1,3 @@
-******* NMOS in IBM 45nm SOI for on-current measurement
 ******* Author: Mark Gottscho <mgottscho@ucla.edu>
 ******* UCLA NanoCAD Lab (www.nanocad.ee.ucla.edu)
 
@@ -23,7 +22,7 @@
 v_vdd	vdd	0	VDD_VAL 
 
 r1		vdd inter 0.00001
-x_n1	inter	vdd 0	0 d_srpdbnfet	w=W	l=L as=0 ad=0 ps=W pd=W
+x_n1	inter	0 0	0 d_srpdbnfet	w=W	l=L as=0 ad=0 ps=W pd=W
 
 ****** ANALYSIS
 .options accurate

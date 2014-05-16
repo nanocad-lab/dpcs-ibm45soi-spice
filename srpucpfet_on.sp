@@ -1,4 +1,3 @@
-******* NMOS in IBM 45nm SOI for on-current measurement
 ******* Author: Mark Gottscho <mgottscho@ucla.edu>
 ******* UCLA NanoCAD Lab (www.nanocad.ee.ucla.edu)
 
